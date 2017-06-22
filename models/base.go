@@ -7,6 +7,7 @@ import (
 )
 
 func Init() {
+	orm.Debug = true
 	dbhost := beego.AppConfig.String("dbhost")
 	dbport := beego.AppConfig.String("dbport")
 	dbuser := beego.AppConfig.String("dbuser")

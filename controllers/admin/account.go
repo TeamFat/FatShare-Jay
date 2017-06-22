@@ -41,10 +41,15 @@ func (this *AccountController) Login() {
 				} else {
 					this.Ctx.SetCookie("auth", strconv.Itoa(user.Id)+"|"+authkey)
 				}
-
 				this.Redirect("/admin", 302)
 			}
 		}
 	}
 	this.TplName = this.moduleName + "/account/login.html"
+}
+
+//退出登录
+func (this *AccountController) Logout() {
+	this.Ctx.SetCookie("auth", "")
+	this.Redirect("/admin/login", 302)
 }
