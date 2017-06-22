@@ -17,7 +17,6 @@ func (this *IndexController) Index() {
 	this.Data["version"] = beego.AppConfig.String("AppVer")
 	this.Data["adminid"] = this.userid
 	this.Data["adminname"] = this.username
-
 	this.TplName = this.moduleName + "/index/index.html"
 }
 
@@ -29,8 +28,6 @@ func (this *IndexController) Main() {
 	this.Data["os"] = runtime.GOOS
 	this.Data["cpunum"] = runtime.NumCPU()
 	this.Data["arch"] = runtime.GOARCH
-
 	this.Data["usernum"], _ = new(models.User).Query().Count()
-
 	this.display()
 }
