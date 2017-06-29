@@ -14,8 +14,8 @@
 				<a href="/admin" class="logo">后台管理 <span style="font-size:11px">v{{.version}}</span></a>
 				<div class="top-menu">
 				您好！{{.adminname}}  <span>|</span>
-				<a href="/admin/logout">退出登录</a> <span>|</span> 
-				<a href="/admin/account/profile" target="main">个人信息</a> <span>|</span> 
+				<a href="/admin/logout">退出登录</a> <span>|</span>
+				<a href="/admin/account/profile" target="main">个人信息</a> <span>|</span>
 				<a href="/" target="_blank">站点首页</a>
 				</div>
 			</td>
@@ -39,7 +39,14 @@
 								<ul class="sub-menu">
 								</ul>
 							</li>
-
+							<li>
+								<a href="javascript:void(0);" class="open">文件管理</a>
+								<ul class="sub-menu">
+									<li><a href="/admin/article/add" target="main">发布文件</a></li>
+									<li><a href="/admin/article/list" target="main">文件列表</a></li>
+									<li><a href="/admin/tag" target="main">标签管理</a></li>
+								</ul>
+							</li>
 							<li>
 								<a href="javascript:void(0);" class="open">用户管理</a>
 								<ul class="sub-menu">
