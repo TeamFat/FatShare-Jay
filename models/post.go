@@ -25,6 +25,7 @@ type Post struct {
 	Status     int8
 	UpdateTime time.Time `orm:"type(datetime)"`
 	IsTop      int8
+	UpFilePath string `orm:"size(100);index"`
 }
 
 func (m *Post) TableName() string {

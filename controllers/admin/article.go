@@ -9,6 +9,7 @@ import (
 
 	"github.com/TeamFat/FatShare-Jay/models"
 	"github.com/TeamFat/FatShare-Jay/util"
+	"github.com/TeamFat/FatShare-Jay/util/uploader"
 	"github.com/astaxie/beego/orm"
 )
 
@@ -86,23 +87,26 @@ func (this *ArticleController) Edit() {
 //保存
 func (this *ArticleController) Save() {
 	var (
-		id      int    = 0
-		title   string = strings.TrimSpace(this.GetString("title"))
-		content string = this.GetString("content")
-		tags    string = strings.TrimSpace(this.GetString("tags"))
-		urlname string = strings.TrimSpace(this.GetString("urlname"))
-		color   string = strings.TrimSpace(this.GetString("color"))
-		timestr string = strings.TrimSpace(this.GetString("posttime"))
-		status  int    = 0
-		istop   int8   = 0
-		urltype int8   = 0
-		post    models.Post
+		id         int    = 0
+		title      string = strings.TrimSpace(this.GetString("title"))
+		content    string = this.GetString("content")
+		tags       string = strings.TrimSpace(this.GetString("tags"))
+		urlname    string = strings.TrimSpace(this.GetString("urlname"))
+		color      string = strings.TrimSpace(this.GetString("color"))
+		timestr    string = strings.TrimSpace(this.GetString("posttime"))
+		upfilepath string = strings.TrimSpace(this.GetString("upfilepath"))
+		status     int    = 0
+		istop      int8   = 0
+		urltype    int8   = 0
+		post       models.Post
 	)
 
 	if title == "" {
 		this.showmsg("标题不能为空！")
 	}
-
+	if upfilepath == "" {
+		this.showmsg("未上传文件！")
+	}
 	id, _ = this.GetInt("id")
 	status, _ = this.GetInt("status")
 
@@ -186,7 +190,8 @@ func (this *ArticleController) Save() {
 	post.UrlName = urlname
 	post.UrlType = urltype
 	post.UpdateTime = this.getTime()
-	post.Update("tags", "status", "title", "color", "is_top", "content", "url_name", "url_type", "update_time", "post_time")
+	post.UpFilePath = upfilepath
+	post.Update("tags", "status", "title", "color", "is_top", "content", "url_name", "url_type", "update_time", "post_time", "up_file_path")
 
 RD:
 	this.Redirect("/admin/article/list", 302)
@@ -256,6 +261,11 @@ func (this *ArticleController) Upload() {
 				out["state"] = err.Error()
 			} else {
 				out["url"] = filename[1:]
+				qiniuErr := uploader.Qiniu(filename, filename[1:])
+				if qiniuErr != nil {
+					out["state"] = qiniuErr.Error()
+				}
+
 			}
 		}
 	}
