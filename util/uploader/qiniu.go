@@ -1,6 +1,7 @@
 package uploader
 
 import (
+	"github.com/astaxie/beego"
 	"qiniupkg.com/api.v7/conf"
 	"qiniupkg.com/api.v7/kodo"
 	"qiniupkg.com/api.v7/kodocli"
@@ -19,8 +20,8 @@ type PutRet struct {
 
 func Qiniu(filepath string, key string) error {
 	// 初始化AK，SK
-	conf.ACCESS_KEY = ""
-	conf.SECRET_KEY = ""
+	conf.ACCESS_KEY = beego.AppConfig.String("QAK")
+	conf.SECRET_KEY = beego.AppConfig.String("QSK")
 
 	// 创建一个Client
 	c := kodo.New(0, nil)

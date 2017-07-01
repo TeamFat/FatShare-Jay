@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/url"
 	"strings"
+
+	"github.com/astaxie/beego"
 )
 
 func Md5(buf []byte) string {
@@ -15,4 +17,8 @@ func Md5(buf []byte) string {
 
 func Rawurlencode(str string) string {
 	return strings.Replace(url.QueryEscape(str), "+", "%20", -1)
+}
+
+func GetCdnUrl(in string) (out string) {
+	return "http://" + beego.AppConfig.String("QCdnDomain") + "/" + in
 }

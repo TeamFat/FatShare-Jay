@@ -28,6 +28,7 @@
 				<th width="30"><input type="checkbox" name="all" value="0" onclick="checkall('ids[]', this)" /></th>
 				<th width="50">ID</th>
 				<th>标题</th>
+				<th >文件信息</th>
 				<th width="150">类别</th>
 				<th width="60">点击量</th>
 				<th width="60">发布人</th>
@@ -44,11 +45,12 @@
 				{{if $v.IsTop}}
 				<i class="icon-arrow-up" title="置顶"> </i>
 				{{end}}
-				<a href="{{$v.Link}}" target="_blank">{{str2html $v.ColorTitle}}</a>
+				<a href="{{$v.UpFilePath |getCdnUrl}}" target="_blank">{{str2html $v.ColorTitle}}</a>
 				{{if $v.UrlType}}
 				<span class="label label-important">页面</span>
 				{{end}}
 			</td>
+			<td>{{$v.UpFilePath|getCdnUrl}}</td>
 			<td class="hl_tag">{{str2html $v.TagsLink}}</td>
 			<td>{{$v.Views}}</td>
 			<td class="hl_author">{{$v.Author}}</td>

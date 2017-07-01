@@ -2,10 +2,21 @@ package routers
 
 import (
 	"github.com/TeamFat/FatShare-Jay/controllers/admin"
+	"github.com/TeamFat/FatShare-Jay/controllers/blog"
 	"github.com/astaxie/beego"
 )
 
 func init() {
+	//前台路由
+	beego.Router("/", &blog.MainController{}, "*:Index")
+	beego.Router("/page/:page:int", &blog.MainController{}, "*:Index")
+	beego.Router("/article/:id:int", &blog.MainController{}, "*:Show")      //ID访问
+	beego.Router("/article/:urlname(.+)", &blog.MainController{}, "*:Show") //别名访问
+	beego.Router("/archives", &blog.MainController{}, "*:Archives")
+	beego.Router("/archives/page/:page:int", &blog.MainController{}, "*:Archives")
+	beego.Router("/category/:name(.+?)", &blog.MainController{}, "*:Category")
+	beego.Router("/category/:name(.+?)/page/:page:int", &blog.MainController{}, "*:Category")
+	beego.Router("/:urlname(.+)", &blog.MainController{}, "*:Show") //别名访问
 	//后台路由
 	beego.Router("/admin", &admin.IndexController{}, "*:Index")
 	beego.Router("/admin/main", &admin.IndexController{}, "*:Main")

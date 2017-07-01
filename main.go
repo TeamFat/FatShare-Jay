@@ -14,6 +14,7 @@ func init() {
 	})
 
 	models.Init()
+	beego.AddFuncMap("getCdnUrl", util.GetCdnUrl)
 }
 
 func main() {

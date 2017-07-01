@@ -260,8 +260,8 @@ func (this *ArticleController) Upload() {
 			if err := this.SaveToFile("upfile", filename); err != nil {
 				out["state"] = err.Error()
 			} else {
-				out["url"] = filename[1:]
-				qiniuErr := uploader.Qiniu(filename, filename[1:])
+				out["url"] = filename[2:]
+				qiniuErr := uploader.Qiniu(filename, filename[2:])
 				if qiniuErr != nil {
 					out["state"] = qiniuErr.Error()
 				}
