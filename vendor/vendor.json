@@ -1,0 +1,163 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "SkoyrWJR3OI+AZ80xbndVye1Gzc=",
+			"path": "github.com/astaxie/beego",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "DPEoKPetckr8n6lCykMu3Po3PAs=",
+			"path": "github.com/astaxie/beego/config",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "iZ7Nlj++9sGGrw8mmYpA9Sm2SbI=",
+			"path": "github.com/astaxie/beego/context",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "+5TpkCiIAd6g6ecRkPbGS/Ivbl8=",
+			"path": "github.com/astaxie/beego/context/param",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "2Zx/H7cxwDneCICsKGGwMH1xnpE=",
+			"path": "github.com/astaxie/beego/grace",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "344q9RmrnioQ8oSNrxuBA1/Rpp0=",
+			"path": "github.com/astaxie/beego/logs",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "nn1W52oRi2Hqt1jzIUA7/KTij/0=",
+			"path": "github.com/astaxie/beego/orm",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "WGnti4OYSissIV67mLh9a14lwxk=",
+			"path": "github.com/astaxie/beego/session",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "B6+D5EMUhOmo6I5wIVoTwNfcsV8=",
+			"path": "github.com/astaxie/beego/toolbox",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "wyz5HgdoDurteHhp63m+CwKx7zg=",
+			"path": "github.com/astaxie/beego/utils",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "jmuLy9nY7wNhB/SLnarnL9Lucvs=",
+			"path": "github.com/astaxie/beego/validation",
+			"revision": "cab8458c1c4a5a3b4bf5192922be620e6dede15b",
+			"revisionTime": "2017-05-19T13:19:18Z"
+		},
+		{
+			"checksumSHA1": "3k7BguDhiQ60X8PVTdpey+WO7Yg=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "8fefef06da7707b5a3cda42195a6b409c9c9ab5c",
+			"revisionTime": "2017-06-16T13:16:31Z"
+		},
+		{
+			"checksumSHA1": "Y+HGqEkYM15ir+J93MEaHdyFy0c=",
+			"path": "golang.org/x/net/context",
+			"revision": "1f9224279e98554b6a6432d4dd998a739f8b2b7c",
+			"revisionTime": "2017-06-29T16:46:45Z"
+		},
+		{
+			"checksumSHA1": "FScvKwivlFvoDvfeCiHJ4crGDRo=",
+			"path": "qiniupkg.com/api.v7/api",
+			"revision": "33f18792da10ba96109ee98a0c7fe53cd6a8a65a",
+			"revisionTime": "2017-06-20T09:52:29Z"
+		},
+		{
+			"checksumSHA1": "puuQ+XItb64YTOMAeWmK/wozaxo=",
+			"path": "qiniupkg.com/api.v7/auth/qbox",
+			"revision": "33f18792da10ba96109ee98a0c7fe53cd6a8a65a",
+			"revisionTime": "2017-06-20T09:52:29Z"
+		},
+		{
+			"checksumSHA1": "zu+k+1N/RSF7j7+D4fLN4g9KTfA=",
+			"path": "qiniupkg.com/api.v7/conf",
+			"revision": "33f18792da10ba96109ee98a0c7fe53cd6a8a65a",
+			"revisionTime": "2017-06-20T09:52:29Z"
+		},
+		{
+			"checksumSHA1": "kaKYMvhYMqOZ+6pnjAX0johaar0=",
+			"path": "qiniupkg.com/api.v7/kodo",
+			"revision": "33f18792da10ba96109ee98a0c7fe53cd6a8a65a",
+			"revisionTime": "2017-06-20T09:52:29Z"
+		},
+		{
+			"checksumSHA1": "+2/nhMZ/UC2CRO5+VYBvTDUsrv4=",
+			"path": "qiniupkg.com/api.v7/kodocli",
+			"revision": "33f18792da10ba96109ee98a0c7fe53cd6a8a65a",
+			"revisionTime": "2017-06-20T09:52:29Z"
+		},
+		{
+			"checksumSHA1": "n5BVAYgjR6Ewu/f5ZtFEMQw2cg4=",
+			"path": "qiniupkg.com/x/bytes.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "D8o364JSeYSXiqyONWx8Lyz5mGA=",
+			"path": "qiniupkg.com/x/bytes.v7/seekable",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "lZpPFmsyzRMToTt+2fUX+PBzZnE=",
+			"path": "qiniupkg.com/x/ctype.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "2/bFXG8FXH2LJmlkgq1h3/a3RxQ=",
+			"path": "qiniupkg.com/x/log.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "q0yB/Ie0jfqr0ePkdbpwi4hDOQM=",
+			"path": "qiniupkg.com/x/reqid.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "ro7nbrE3KwapbBQ6DK+ajjEkPm0=",
+			"path": "qiniupkg.com/x/rpc.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "qO82X/wOaqSKzx/xIZYQsmrdcyY=",
+			"path": "qiniupkg.com/x/url.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		},
+		{
+			"checksumSHA1": "CCXvM9IWuwIsVeIxLi0Rf0PzYs8=",
+			"path": "qiniupkg.com/x/xlog.v7",
+			"revision": "f512abcf45ab4e2ba0fd4784c57b53d495997d66",
+			"revisionTime": "2015-07-21T03:41:13Z"
+		}
+	],
+	"rootPath": "github.com/TeamFat/FatShare-Jay"
+}
