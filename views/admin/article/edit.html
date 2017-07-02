@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/static/themes/admin/css/jquery-ui.css">
 <fieldset>
 	<legend>编辑文件</legend>
 	<form method="post" name="p" action="/admin/article/save">
@@ -48,6 +49,7 @@
 					<input id="upfile" type="file" name="upfile"/>
 					<button id="upload" class="btn btn-info"  type="button">点击上传</button>
 					 文件信息  <input id="upfilepath" type="text" name="upfilepath" class="span6" value="{{.post.UpFilePath}}"/>
+					 <div id="progressbar" class="span10" style="display:none"></div>
 				</td>
 			</tr>
 		</tbody>
@@ -64,8 +66,12 @@
 </fieldset>
 
 <script src="/static/themes/admin/js/jquery.colorpicker.js" type="text/javascript"></script>
+<script src="/static/themes/admin/js/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(function() {
+		$( "#progressbar" ).progressbar({
+			value: false
+		});
 		$("#colorpicker").colorpicker({
 			fillcolor:true,
 			success:function(o,color){
@@ -76,6 +82,33 @@
 				$("input[name='title']").css("color","");
 				$("input[name='color']").val("");
 			}
+		});
+		$("#upload").click(function(){
+			var formData = new FormData(),
+    		uploadFile = document.getElementById('upfile');
+    		formData.append('upfile', uploadFile.files[0]);
+			$( "#progressbar" ).show();
+			$.ajax({
+				url: '/admin/article/upload',
+				type: 'POST',
+				cache: false,
+				data: formData,
+				processData: false,
+				contentType: false
+			}).success(function(res) {
+				console.log(res);
+				if(res.state != 'SUCCESS'){
+					$('#erroralert').show();
+					$('#errormsg').text('上传失败，'+ res.state);
+				}else{
+					$('#erroralert').show();
+					$( "#progressbar" ).hide();
+					$('#upfilepath').val(res.url);
+				}
+			}).error(function(res) {
+				$('#erroralert').show();
+				$('#errormsg').text('上传失败，请重试');
+			});
 		});
 	});
 </script>
